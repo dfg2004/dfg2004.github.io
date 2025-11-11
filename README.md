@@ -195,6 +195,3 @@ Had a network connectivity problem when I first booted up Arch Linux: had to do 
 
 **Installation Error**
 Needed sudo to install a package but it wasn't a built-in command so I ran `pacman -S sudo`.
-
-![[Pasted image 20251111165028.png]]
-![[Pasted image 20251111165112.png]]
