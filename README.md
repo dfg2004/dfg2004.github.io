@@ -39,6 +39,7 @@ When partitioning the disks, I ran into a problem figuring out how I needed to p
 	8. Press enter to get default sector for each partition (1 & 2)
 	9. I typed `+1G` to allocate 1 GiB for the /sda1 partition (my EFI partition) and just pressed enter to give the /sda2 partition (my root partition) the remainder of the device (7 GiB)
 	10. To change the partition type from 'Linux' to 'EFI', I entered `t` and then `EF` for UEFI
+[Arch Fdisk](https://wiki.archlinux.org/title/Fdisk)
 
 **1.10 Format the partitions** 
 Each partition needs to be formatted with the appropriate file system. Since I created an EFI system partition, I need to format my /sda1 partition to FAT32 with mkfs.fat `mkfs.fat -F32 /dev/sda1`. For the root partition, I created an Ext4 file system using `mkfs.ext4 /dev/sda2`.
@@ -165,9 +166,10 @@ To add an alias, you type "alias" and the new shortcut on the left-hand side, an
 - `alias h='history'`
 - `alias j='jobs -l'
 - `alias path='echo -e ${PATH//:/\\n}'`
-- `alias now='date+"%T"'`
+- `alias now='date +"%T"'`
 - `alias date='date +"%d-%m-%Y"`
-[Example of Aliases](https://www.cyberciti.biz/tips/bash-aliases-mac-centos-linux-unix.html)
+In order for your aliases to stay after logging out, you need to manually add them to your .bashrc file: `nano ~/.bashrc` --> `source ~/.bashrc`.
+[Example of Aliases](https://www.cyberciti.biz/tips/bash-aliases-mac-centos-linux-unix.html) [Aliases Not Saving Sol](https://www.reddit.com/r/linux4noobs/comments/2riimr/why_arent_aliases_saving_or_are_they_not_supposed/)
 
 ---
 ### Problems & Solutions
@@ -193,3 +195,6 @@ Had a network connectivity problem when I first booted up Arch Linux: had to do 
 
 **Installation Error**
 Needed sudo to install a package but it wasn't a built-in command so I ran `pacman -S sudo`.
+
+![[Pasted image 20251111165028.png]]
+![[Pasted image 20251111165112.png]]
