@@ -23,7 +23,7 @@ Run the commands `sudo snf -y install dnf-plugins-core` and `sudo dnf-3 config-m
 
 This could prompt you to accept the GPG. You have to make sure it matches '060A 61C5 1B55 8A7F 742B 77AA C52F EB6B 621E 9F35'
 
-![alt][./image/OpenPGP_key.png]
+![alt](images//OpenPGP_key.png)
 
 **Start Docker Engine**
 
@@ -31,7 +31,7 @@ The command `sudo systemctl enable --now docker` configures the Docker systemd s
 
 After this, you can verify that your installation was successful by running the hell-world image with `sudo docker run hello-world`.
 
-![alt][./image/docker_installation_success.png]
+![alt](images/docker_installation_success.png)
 
 ### Install Docker Compose
 
@@ -51,10 +51,10 @@ On the Installation page for BookStack:
 	1. Set database password for bookstack
 	2. Change the path to the bookstack /config file under "volumes:" to wherever you want to make bookstack
 6. Run `sudo docker compose up -d` (-d makes sure that when you close out your server it doesn't get rid of the container)
-![alt][./image/bookstack_container_creation.png]
+![alt](images/bookstack_container_creation.png)
 8. Go to your browser and navigate to the URL you specified in your .yml (I used localhost). This will load the login page for Bookstack.
 9. The default username is admin@admin.com with the password **password**. This will take you to your home page. 
-![alt][./image/bookstack_homepage.png]
+![alt](images/bookstack_homepage.png)
 
 ### Problems & Solutions
 
