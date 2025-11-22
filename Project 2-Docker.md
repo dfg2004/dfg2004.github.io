@@ -7,7 +7,7 @@ For this project I will be installing the Docker engine in my Fedora VM which us
 
  Linux may provide unofficial Docker packages --> uninstall these to avoid conflict with official packages
  
-![alt](/uninstall_old_docker_pkgs.png)
+![alt](images/uninstall_old_docker_pkgs.png)
 
 **Install using the rpm repository**
 
