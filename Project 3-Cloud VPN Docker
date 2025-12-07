@@ -1,0 +1,26 @@
+### Installing Docker & Docker Compose on Ubuntu 24.04
+
+Instead of installing Docker manually, I installed it using Docker's apt repository which meant I needed to set up the repository first before installing the packages. To do this, I used the commands provided on the official Docker manual pages. [Docker Ubuntu Installation](https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository)
+After following these instructions, I ran the command `sudo docker run hello-world` to run the hello-world image and confirm that the installation was successful.
+
+![[docker_check.png]]
+
+To install Docker Compose, I followed the instructions provided by the Docker manual pages for Plugins. [Docker Compose Ubuntu Installation](https://docs.docker.com/compose/install/linux/)
+
+### Setting Up WireGuard
+
+To install WireGuard, I followed the simple commands given in the instructions: `sudo apt update` and `sudo apt install wireguard`[WireGuard Setup On VM](https://www.digitalocean.com/community/tutorials/how-to-set-up-wireguard-on-ubuntu-20-04#step-2-a-%E2%80%94-choosing-an-ipv4-range). This tutorial shows you how to set up a WireGuard server on the VM itself instead of using Docker, so I used a different guide to continue the project with the correct .yml file format. Using the provided docker-compose.yml template from [GitHub WireGuard Docker Setup](https://github.com/linuxserver/docker-wireguard) and changing the SERVERURL variable, I configured a WireGuard container. After this, I followed a separate tutorial [WireGuard Configuration](https://www.antoinebrossault.com/how-to-setup-wireguard-vpn-with-docker/) to start the container with the command `docker compose up -d` and check and find the created configuration files when the container goes up at "./config/wg_confs/wg0.conf". Using the information found from this file in the VM, I created a configuration file outside of it to import into the WireGuard app on my computer and phone [WireGuard App Install](https://www.wireguard.com/install/ ).
+For both my computer and phone, they say that the VPN is active, but on ipleak.net my ip address does not change.
+
+**wg0.conf file created by container:**
+![[wg0_config.png]]
+
+**On Computer:**
+![[computer_wireguard.png]]
+
+**On Phone:**
+==The NordVPN symbol at the top is a notification that it is paused, the key symbol in the top right is from WireGuard==
+![[phone_wireguard.png]]
+
+
+
