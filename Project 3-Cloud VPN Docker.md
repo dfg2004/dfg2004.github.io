@@ -3,7 +3,7 @@
 Instead of installing Docker manually, I installed it using Docker's apt repository which meant I needed to set up the repository first before installing the packages. To do this, I used the commands provided on the official Docker manual pages. [Docker Ubuntu Installation](https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository)
 After following these instructions, I ran the command `sudo docker run hello-world` to run the hello-world image and confirm that the installation was successful.
 
-![[docker_check.png]]
+![alt](images/docker_check.png)
 
 To install Docker Compose, I followed the instructions provided by the Docker manual pages for Plugins. [Docker Compose Ubuntu Installation](https://docs.docker.com/compose/install/linux/)
 
@@ -13,14 +13,14 @@ To install WireGuard, I followed the simple commands given in the instructions: 
 For both my computer and phone, they say that the VPN is active, but on ipleak.net my ip address does not change.
 
 **wg0.conf file created by container:**
-![[wg0_config.png]]
+![alt](images/wg0_config.png)
 
 **On Computer:**
-![[computer_wireguard.png]]
+![alt](images/computer_wireguard.png)
 
 **On Phone:**
 ==The NordVPN symbol at the top is a notification that it is paused, the key symbol in the top right is from WireGuard==
-![[phone_wireguard.png]]
+![alt](images/phone_wireguard.png)
 
 
 
